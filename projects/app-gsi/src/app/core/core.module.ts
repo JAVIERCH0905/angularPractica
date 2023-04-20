@@ -5,22 +5,30 @@ import { CoreRoutingModule } from './core-routing.module';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { LoginComponent } from './components/login/login.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { PageLoginComponent } from './pages/page-login/page-login.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     MenuComponent,
-    LoginComponent
+    LoginComponent,
+    PageLoginComponent,
   ],
   imports: [
     CommonModule,
-    CoreRoutingModule
+    CoreRoutingModule,
+    FlexLayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatIconModule
   ],
-  exports: [
-    HeaderComponent,
-    MenuComponent,
-    LoginComponent
-  ]
+  exports: [HeaderComponent, MenuComponent, LoginComponent, PageLoginComponent],
 })
-export class CoreModule { }
+export class CoreModule {}
